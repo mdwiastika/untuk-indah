@@ -12,8 +12,27 @@ function handleSuccess() {
       Swal.fire({
         title: "Salting dikit!",
         html: "<div><img src='/assets/giff.gif' /></div>",
-        // icon: "success",
         confirmButtonText: "Lanjut",
+      }).then((result) => {
+        if (result.value) {
+          Swal.fire({
+            title: "Aku sayangg kamu!",
+            html: "<div><img src='/assets/giff2.gif' /></div>",
+            confirmButtonText: "Lanjut",
+          }).then((result) => {
+            if (result.value) {
+              Swal.fire({
+                title: "Kasih Tau Marcel!",
+                // html: "<div><img src='/assets/giff2.gif' /></div>",
+                confirmButtonText: "Kasih Tau!",
+              }).then((result) => {
+                if (result.value) {
+                  window.location.href = "https://wa.me/62895339390753?text=Aku Sayang Kamu!";
+                }
+              });
+            }
+          });
+        }
       });
     }
   });
